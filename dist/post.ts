@@ -12,7 +12,7 @@ export function post(req: Request, res: Response, next: Next): void {
       next(new BadRequestError('ID has to be a numeric value'));
     } else {
       const newCustomer: ICustomer = { id: newCustomerId,
-        firstName: req.body.firstName, lastName: req.body.lastName };
+        firstName: req.body.firstName, lastName: req.body.lastName ,email: req.body.email};
       customers.push(newCustomer);
       res.send(CREATED, newCustomer, {Location: `${req.path()}/${req.body.id}`});
     }

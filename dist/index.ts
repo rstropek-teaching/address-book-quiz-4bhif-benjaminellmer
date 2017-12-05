@@ -10,9 +10,9 @@ var server = createServer();
 server.use(plugins.bodyParser());
 
 // Add routes
-server.get('/api/customers', getAll);
-server.post('/api/customers', post);
-server.get('/api/customers/:id', getSingle);
-server.del('/api/customers/:id', deleteSingle);
+server.get('/api/contacts', getAll);
+server.post('/api/contacts', post);
+server.get('/api/contacts/:id', getSingle);
+server.del('/api/contacts/:id', deleteSingle);
 
 server.listen(8010, () => console.log('API is listening'));
